@@ -24,7 +24,11 @@ namespace Ingredients
             if (piece == null)
             {
                 piece = Instantiate(piecePrefab, transform.position, Quaternion.identity);
+                piece.transform.localScale = Vector3.zero;
                 pieceCollider = piece.GetComponent<Collider2D>();
+                iTween.ScaleTo(piece, iTween.Hash("scale", Vector3.one,
+                                                  "time", 0.5f,
+                                                  "easetype", iTween.EaseType.spring));
             }
         }
 
