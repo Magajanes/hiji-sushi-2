@@ -60,8 +60,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\CuttingBoard.cs" />
+    <Compile Include="Assets\Scripts\Draggable.cs" />
     <Compile Include="Assets\Scripts\Ingredient.cs" />
     <Compile Include="Assets\Scripts\IngredientName.cs" />
+    <Compile Include="Assets\Scripts\Knife.cs" />
+    <Compile Include="Assets\Scripts\PickedUpIngredient.cs" />
+    <Compile Include="Assets\Scripts\SushiMan.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>D:/Games/HijiSushi2/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>

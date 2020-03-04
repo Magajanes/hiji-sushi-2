@@ -4,16 +4,14 @@ using UnityEngine;
 
 namespace Ingredients
 {
-    public class Ingredient : MonoBehaviour
+    public class Ingredient : MonoBehaviour, Draggable
     {
         [SerializeField]
-        private IngredientName Name;
-
+        protected IngredientName Name;
         [SerializeField]
-        private GameObject piecePrefab;
-
+        protected GameObject piecePrefab;
         [SerializeField]
-        private new Collider2D collider;
+        protected new Collider2D collider;
 
         private GameObject piece = null;
         private Collider2D pieceCollider;
@@ -43,7 +41,7 @@ namespace Ingredients
         {
             if (pieceCollider.IsTouching(cuttingBoard))
             {
-                Debug.Log(Name + " used on cutting board!");
+                Debug.Log(Name + " was placed on cutting board, but not processed!");
             }
             else
             {
