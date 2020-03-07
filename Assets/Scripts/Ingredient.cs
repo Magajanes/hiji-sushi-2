@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Ingredients
 {
-    public class Ingredient : MonoBehaviour, Draggable
+    public class Ingredient : DragObject
     {
         [SerializeField]
         protected IngredientName Name;
@@ -13,42 +13,46 @@ namespace Ingredients
         [SerializeField]
         protected new Collider2D collider;
 
-        private GameObject piece = null;
-        private Collider2D pieceCollider;
         private Vector3 position;
 
-        public void PickUp()
+        public override void PickUp()
         {
-            if (piece == null)
-            {
-                piece = Instantiate(piecePrefab, transform.position, Quaternion.identity);
-                piece.transform.localScale = Vector3.zero;
-                pieceCollider = piece.GetComponent<Collider2D>();
-                iTween.ScaleTo(piece, iTween.Hash("scale", Vector3.one,
-                                                  "time", 0.5f,
-                                                  "easetype", iTween.EaseType.spring));
-            }
+            transform.localScale = Vector3.zero;
+            iTween.ScaleTo(gameObject, iTween.Hash("scale", Vector3.one,
+                                              "time", 0.5f,
+                                              "easetype", iTween.EaseType.spring));
         }
 
-        public void Move()
+        public override void Move()
         {
             position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             position.z = 0;
-            piece.transform.position = position;
+            transform.position = position;
         }
 
-        public void Release(Collider2D cuttingBoard)
+        public override void Release()
         {
-            if (pieceCollider.IsTouching(cuttingBoard))
+            if (target == null)
             {
-                Debug.Log(Name + " was placed on cutting board, but not processed!");
-            }
-            else
-            {
-                Destroy(piece.gameObject);
+                Destroy(gameObject);
+                return;
             }
 
-            piece = null;
+            var cuttingBoard = target.GetComponent<CuttingBoard>();
+
+            if (cuttingBoard == null)
+            {
+                Destroy(gameObject);
+                return;
+            }
+
+            if (collider.IsTouching(target))
+                Debug.Log(Name + " was placed on cutting board, but not processed!");
+        }
+
+        public void Process()
+        {
+
         }
     }
 }

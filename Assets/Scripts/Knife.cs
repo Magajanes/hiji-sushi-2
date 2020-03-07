@@ -3,47 +3,44 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Knife : MonoBehaviour, Draggable
+public class Knife : DragObject
 {
     private Vector3 delta;
     private Vector3 position;
 
-    [SerializeField]
-    private PickedUpIngredient targetIngredient;
-
-    public void CalculateDelta()
+    public override void PickUp()
     {
-        var clickPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        clickPosition.z = 0;
-        delta = transform.position - clickPosition;
+        CalculateDelta();
     }
 
-    public void Move()
+    public override void Move()
     {
         position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         position.z = 0;
         transform.position = position + delta;
     }
 
-    public void Cut()
+    public override void Release()
     {
-        if (targetIngredient == null)
+        if (target == null)
             return;
 
-        targetIngredient.Process();
-        targetIngredient = null;
-    }
+        var ingredient = target.GetComponent<Ingredient>();
 
-    private void OnTriggerEnter2D(Collider2D collider)
-    {
-        if (targetIngredient != null)
+        if (ingredient == null)
             return;
 
-        targetIngredient = collider.GetComponent<PickedUpIngredient>();
+        Cut(ingredient);
+    }
+    private void CalculateDelta()
+    {
+        var clickPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        clickPosition.z = 0;
+        delta = transform.position - clickPosition;
     }
 
-    private void OnTriggerExit2D(Collider2D collider)
+    private void Cut(Ingredient ingredient)
     {
-        targetIngredient = null;
+        ingredient.Process();
     }
 }

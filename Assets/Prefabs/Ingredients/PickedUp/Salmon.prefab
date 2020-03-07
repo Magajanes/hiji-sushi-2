@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &3645614190506986358
+--- !u!1 &8779393871412902457
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,24 +8,24 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3675678213394762258}
-  - component: {fileID: 5045157600358720214}
-  - component: {fileID: 61339911335434366}
-  - component: {fileID: 114251219686537554}
+  - component: {fileID: 3621039281101953927}
+  - component: {fileID: 5740674233352625266}
+  - component: {fileID: 61038503026608636}
+  - component: {fileID: 114725329627960042}
   m_Layer: 0
-  m_Name: PickedUpRice
+  m_Name: Salmon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3675678213394762258
+--- !u!4 &3621039281101953927
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3645614190506986358}
+  m_GameObject: {fileID: 8779393871412902457}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -33,13 +33,13 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &5045157600358720214
+--- !u!212 &5740674233352625266
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3645614190506986358}
+  m_GameObject: {fileID: 8779393871412902457}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -70,24 +70,24 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: efbeb47dde6384144aec7e8f5613e053, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b1c7dcb0eeb8d4d41bd17718490a2ae0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.5, y: 0.45588234}
+  m_Size: {x: 0.5, y: 0.3692748}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &61339911335434366
+--- !u!61 &61038503026608636
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3645614190506986358}
+  m_GameObject: {fileID: 8779393871412902457}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -98,27 +98,28 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.5, y: 0.45588234}
-    newSize: {x: 0.5, y: 0.45588234}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 0.5, y: 0.3692748}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5, y: 0.45588234}
+  m_Size: {x: 0.94, y: 0.43}
   m_EdgeRadius: 0
---- !u!114 &114251219686537554
+--- !u!114 &114725329627960042
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3645614190506986358}
+  m_GameObject: {fileID: 8779393871412902457}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f44120b1e65b1a547bf233e3e5442155, type: 3}
+  m_Script: {fileID: 11500000, guid: 6e9aef6cf2d67ac4b8cd1f44285231e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: 0
-  piecePrefab: {fileID: 0}
-  collider: {fileID: 61339911335434366}
+  Name: 1
+  piecePrefab: {fileID: 8779393871412902457, guid: 81fc20774ec77894eadae6a9d429a7d6,
+    type: 3}
+  collider: {fileID: 61038503026608636}
