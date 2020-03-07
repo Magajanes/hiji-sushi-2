@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5740674233352625266}
   - component: {fileID: 6839807542094326537}
   - component: {fileID: 114781524731787124}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ProcessedSalmon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -119,3 +119,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecdc93a7dbab97a4ab1beff278ca3b20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Name: 1
+  collider: {fileID: 6839807542094326537}
+  piecePrefab: {fileID: 0}

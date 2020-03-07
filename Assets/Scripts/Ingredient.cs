@@ -9,9 +9,10 @@ namespace Ingredients
         [SerializeField]
         protected IngredientName Name;
         [SerializeField]
-        protected GameObject piecePrefab;
-        [SerializeField]
         protected new Collider2D collider;
+
+        [SerializeField]
+        private GameObject piecePrefab;
 
         private Vector3 position;
 
@@ -52,7 +53,10 @@ namespace Ingredients
 
         public void Process()
         {
+            if (piecePrefab == null)
+                return;
 
+            Instantiate(piecePrefab, transform.position + Vector3.right, Quaternion.identity);
         }
     }
 }

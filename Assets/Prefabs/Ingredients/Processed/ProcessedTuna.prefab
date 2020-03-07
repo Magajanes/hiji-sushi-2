@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2104055694734591780}
   - component: {fileID: 5291312313793606923}
   - component: {fileID: 114597424314973458}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ProcessedTuna
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -119,3 +119,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecdc93a7dbab97a4ab1beff278ca3b20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Name: 2
+  collider: {fileID: 5291312313793606923}
+  piecePrefab: {fileID: 0}

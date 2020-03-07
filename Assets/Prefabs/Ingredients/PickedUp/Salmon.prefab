@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5740674233352625266}
   - component: {fileID: 61038503026608636}
   - component: {fileID: 114725329627960042}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Salmon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -120,6 +120,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: 1
+  collider: {fileID: 61038503026608636}
   piecePrefab: {fileID: 8779393871412902457, guid: 81fc20774ec77894eadae6a9d429a7d6,
     type: 3}
-  collider: {fileID: 61038503026608636}

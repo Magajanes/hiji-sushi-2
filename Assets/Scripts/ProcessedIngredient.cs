@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Ingredients
 {
-    public class ProcessedIngredient : MonoBehaviour
+    public class ProcessedIngredient : Ingredient
     {
 
     }

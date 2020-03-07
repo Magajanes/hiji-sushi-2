@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2104055694734591780}
   - component: {fileID: 61356815267314206}
   - component: {fileID: 114868717039860170}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Tuna
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -120,6 +120,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: 2
+  collider: {fileID: 61356815267314206}
   piecePrefab: {fileID: 4317797661500736201, guid: 59ea801969db0d348b222f22a13d9a1b,
     type: 3}
-  collider: {fileID: 61356815267314206}

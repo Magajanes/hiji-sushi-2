@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5045157600358720214}
   - component: {fileID: 61339911335434366}
   - component: {fileID: 114735997313311684}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Rice
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -120,5 +120,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: 0
-  piecePrefab: {fileID: 0}
   collider: {fileID: 61339911335434366}
+  piecePrefab: {fileID: 0}

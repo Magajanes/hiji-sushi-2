@@ -10,7 +10,9 @@ public class Knife : DragObject
 
     public override void PickUp()
     {
-        CalculateDelta();
+        var clickPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        clickPosition.z = 0;
+        delta = transform.position - clickPosition;
     }
 
     public override void Move()
@@ -31,12 +33,6 @@ public class Knife : DragObject
             return;
 
         Cut(ingredient);
-    }
-    private void CalculateDelta()
-    {
-        var clickPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        clickPosition.z = 0;
-        delta = transform.position - clickPosition;
     }
 
     private void Cut(Ingredient ingredient)

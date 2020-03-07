@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8914132711024960902}
   - component: {fileID: 61593573822467916}
   - component: {fileID: 114808425477521376}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wasabi
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -120,5 +120,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: 3
-  piecePrefab: {fileID: 0}
   collider: {fileID: 61593573822467916}
+  piecePrefab: {fileID: 0}
